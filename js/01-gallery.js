@@ -1,14 +1,14 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
+// console.log(galleryItems);
 
 // Creation gallery
 const gallery = document.querySelector(".gallery");
 const imageGallery = createGallery(galleryItems);
 
 gallery.insertAdjacentHTML("afterbegin", imageGallery);
-gallery.addEventListener("click", handleClickOnImage);
+gallery.addEventListener("click", onClickImage);
 
 function createGallery(markup) {
   return markup
@@ -29,7 +29,7 @@ function createGallery(markup) {
 }
 
 //Click on image handler
-function handleClickOnImage(event) {
+function onClickImage(event) {
   event.preventDefault();
   if (!event.target.classList.contains("gallery__image")) {
     return;
